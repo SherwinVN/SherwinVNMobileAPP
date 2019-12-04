@@ -16,7 +16,7 @@ final drawerItems = [
 class NavigationMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Drawer(
+    return Drawer(      
       child: ListView(
         children: <Widget>[
           UserAccountsDrawerHeader(

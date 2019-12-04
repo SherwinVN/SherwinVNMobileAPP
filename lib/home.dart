@@ -10,7 +10,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      drawer: NavigationMain(),
+      resizeToAvoidBottomPadding: false,
+      endDrawer: NavigationMain(),
       bottomNavigationBar: new BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         fixedColor: Color(0XFF29D091),
