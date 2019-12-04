@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'loginPage.dart';
-import 'navigation.dart';
 import 'stacked_icons.dart';
 import 'option.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -26,7 +25,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      drawer: NavigationMain(),
       body: Center(
         child: Column(
           children: <Widget>[

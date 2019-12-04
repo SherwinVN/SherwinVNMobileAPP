@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'navigation.dart';
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => new _HomePageState();
@@ -10,6 +10,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      drawer: NavigationMain(),
       bottomNavigationBar: new BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         fixedColor: Color(0XFF29D091),
