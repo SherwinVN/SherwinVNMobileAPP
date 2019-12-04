@@ -37,7 +37,6 @@ class NavigationMain extends StatelessWidget {
             title: Text("Cấp mã số bí mật"),
             trailing: Icon(Icons.code),
             onTap: () {
-              Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context) => Masobimat()));
             },
