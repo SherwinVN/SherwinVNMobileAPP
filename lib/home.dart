@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'navigation.dart';
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => new _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  int _bottomNavIndex=0;
+  int _bottomNavIndex = 0;
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -15,32 +16,21 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: new BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         fixedColor: Color(0XFF29D091),
-         currentIndex: _bottomNavIndex,
-         onTap: (int index){
-          setState((){
+        currentIndex: _bottomNavIndex,
+        onTap: (int index) {
+          setState(() {
             _bottomNavIndex = index;
-            
           });
-         },
-         
+        },
         items: [
           new BottomNavigationBarItem(
-            title: new Text(''),
-             icon: new Icon(Icons.home)
-          ),
+              title: new Text(''), icon: new Icon(Icons.home)),
           new BottomNavigationBarItem(
-            title: new Text(''),
-             icon: new Icon(Icons.local_offer)
-          ),
+              title: new Text(''), icon: new Icon(Icons.local_offer)),
           new BottomNavigationBarItem(
-            title: new Text(''),
-             icon: new Icon(Icons.message)
-          ),
+              title: new Text(''), icon: new Icon(Icons.message)),
           new BottomNavigationBarItem(
-            title: new Text(''),
-             icon: new Icon(Icons.notifications)
-          )
-
+              title: new Text(''), icon: new Icon(Icons.notifications))
         ],
       ),
       appBar: new AppBar(
@@ -65,7 +55,7 @@ class MainContent extends StatelessWidget {
               Row(
                 children: <Widget>[
                   new Text(
-                    "Explore",
+                    "All My Work",
                     style: new TextStyle(
                       fontSize: 30.0,
                     ),
@@ -74,37 +64,13 @@ class MainContent extends StatelessWidget {
                 ],
               ),
               Row(
-                children: <Widget>[
-                 
-                  
-                ],
+                children: <Widget>[],
               ),
               new SizedBox(
                 height: 10.0,
               ),
               Row(
                 children: <Widget>[
-                  new Expanded(
-                      child: Padding(
-                    padding: const EdgeInsets.only(right: 5.0),
-                    child: new Container(
-                      height: 100.0,
-                      decoration: new BoxDecoration(
-                          borderRadius: new BorderRadius.circular(5.0),
-                          color: Color(0xFFFD7384)),
-                      child: new Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          new Icon(
-                            Icons.drive_eta,
-                            color: Colors.white,
-                          ),
-                          new Text("Motor",
-                              style: new TextStyle(color: Colors.white))
-                        ],
-                      ),
-                    ),
-                  )),
                   new Expanded(
                       child: new Container(
                     height: 100.0,
@@ -128,7 +94,7 @@ class MainContent extends StatelessWidget {
                                       color: Colors.white,
                                     ),
                                   ),
-                                  new Text('Classified',
+                                  new Text('Leaning',
                                       style: new TextStyle(color: Colors.white))
                                 ],
                               ),
@@ -149,11 +115,11 @@ class MainContent extends StatelessWidget {
                                   Padding(
                                     padding: const EdgeInsets.only(right: 8.0),
                                     child: new Icon(
-                                      Icons.beenhere,
+                                      Icons.thumb_up,
                                       color: Colors.white,
                                     ),
                                   ),
-                                  new Text('Service',
+                                  new Text('Skill',
                                       style: new TextStyle(color: Colors.white))
                                 ],
                               ),
@@ -182,11 +148,11 @@ class MainContent extends StatelessWidget {
                                   Padding(
                                     padding: const EdgeInsets.only(right: 8.0),
                                     child: new Icon(
-                                      Icons.account_balance,
+                                      Icons.share,
                                       color: Colors.white,
                                     ),
                                   ),
-                                  new Text('Properties',
+                                  new Text('Share',
                                       style: new TextStyle(color: Colors.white))
                                 ],
                               ),
@@ -206,11 +172,11 @@ class MainContent extends StatelessWidget {
                                   Padding(
                                     padding: const EdgeInsets.only(right: 8.0),
                                     child: new Icon(
-                                      Icons.art_track,
+                                      Icons.vpn_key,
                                       color: Colors.white,
                                     ),
                                   ),
-                                  new Text('Jobs',
+                                  new Text('Password',
                                       style: new TextStyle(color: Colors.white))
                                 ],
                               ),
@@ -218,6 +184,27 @@ class MainContent extends StatelessWidget {
                           ),
                         ),
                       ],
+                    ),
+                  )),
+                  new Expanded(
+                      child: Padding(
+                    padding: const EdgeInsets.only(left: 5.0),
+                    child: new Container(
+                      height: 100.0,
+                      decoration: new BoxDecoration(
+                          borderRadius: new BorderRadius.circular(5.0),
+                          color: Color(0xFFFD7384)),
+                      child: new Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          new Icon(
+                            Icons.person_pin,
+                            color: Colors.white,
+                          ),
+                          new Text("Pravite",
+                              style: new TextStyle(color: Colors.white))
+                        ],
+                      ),
                     ),
                   )),
                 ],
@@ -228,11 +215,11 @@ class MainContent extends StatelessWidget {
               Row(
                 children: <Widget>[
                   new Expanded(
-                      child: new Text("Popular Trending",
+                      child: new Text("Leaning",
                           style: new TextStyle(fontSize: 18.0))),
                   new Expanded(
                       child: new Text(
-                    "View All",
+                    "More",
                     style: new TextStyle(color: Color(0XFF2BD093)),
                     textAlign: TextAlign.end,
                   ))
@@ -246,7 +233,6 @@ class MainContent extends StatelessWidget {
                   new Expanded(
                     child: Container(
                       height: 150.0,
-                      
                       child: new Column(
                         children: <Widget>[
                           new Container(
@@ -323,11 +309,11 @@ class MainContent extends StatelessWidget {
               Row(
                 children: <Widget>[
                   new Expanded(
-                      child: new Text("Popular Trending",
+                      child: new Text("Github",
                           style: new TextStyle(fontSize: 18.0))),
                   new Expanded(
                       child: new Text(
-                    "View All",
+                    "More",
                     style: new TextStyle(color: Color(0XFF2BD093)),
                     textAlign: TextAlign.end,
                   ))
@@ -416,12 +402,16 @@ class MainContent extends StatelessWidget {
               ),
               Row(
                 children: <Widget>[
-                  new Expanded(
-                      child: new Text("Popular Trending",
-                          style: new TextStyle(fontSize: 18.0))),
+                 
                   new Expanded(
                       child: new Text(
-                    "View All",
+                    "Social",
+                    style: new TextStyle(fontSize: 18.0),
+                    textAlign: TextAlign.start,
+                  )),
+                  new Expanded(
+                      child: new Text(
+                    "More",
                     style: new TextStyle(color: Color(0XFF2BD093)),
                     textAlign: TextAlign.end,
                   ))
