@@ -4,8 +4,14 @@ import 'stacked_icons.dart';
 import 'home.dart';
 
 class LoginPage extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
+    
+    TextEditingController  txtUser = new TextEditingController ();
+    txtUser.text="Admin";
+    TextEditingController  txtpass = new TextEditingController ();
+    txtpass.text="123";
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
       statusBarColor: Colors.orange, //or set color with: Color(0xFF0000FF)
     ));
@@ -27,9 +33,11 @@ class LoginPage extends StatelessWidget {
                     ])),
             Padding(
               padding:
+              
                   const EdgeInsets.symmetric(horizontal: 20.0, vertical: 0.0),
               child: new TextField(
-                decoration: new InputDecoration(labelText: 'Email'),
+                controller: txtUser,
+                decoration: new InputDecoration(labelText: 'Username'),
               ),
             ),
             new SizedBox(
@@ -39,6 +47,7 @@ class LoginPage extends StatelessWidget {
               padding:
                   const EdgeInsets.symmetric(horizontal: 20.0, vertical: 0.0),
               child: new TextField(
+                controller: txtpass,
                 obscureText: true,
                 decoration: new InputDecoration(labelText: 'Password'),
               ),
@@ -52,7 +61,7 @@ class LoginPage extends StatelessWidget {
                         left: 20.0, right: 5.0, top: 10.0),
                     child: GestureDetector(
                       onTap: () {
-                        if (checkLogin("admin","123")) {
+                        if (checkLogin(txtUser.value.text,txtpass.value.text)) {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
@@ -108,7 +117,7 @@ class LoginPage extends StatelessWidget {
 
   bool checkLogin(String user, String pass) {
     bool boo = false;
-    if (user == "admin" && pass == "123") boo = true;
+    if (user.toLowerCase() == "admin" && pass == "123") boo = true;
     return boo;
   }
 }

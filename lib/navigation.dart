@@ -16,7 +16,7 @@ final drawerItems = [
 class NavigationMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Drawer(      
+    return Drawer(
       child: ListView(
         children: <Widget>[
           UserAccountsDrawerHeader(
@@ -37,20 +37,20 @@ class NavigationMain extends StatelessWidget {
             title: Text("Cấp mã số bí mật"),
             trailing: Icon(Icons.code),
             onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (BuildContext context) => Masobimat()));
-             
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => Masobimat()));
             },
           ),
           ListTile(
             title: Text("Facebook"),
             trailing: Icon(Icons.person_pin),
-          ),          
+          ),
           ListTile(
             title: Text("About Me!"),
             trailing: Icon(Icons.healing),
           ),
         ],
+        
       ),
     );
   }
