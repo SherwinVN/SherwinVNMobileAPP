@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'loginPage.dart';
+import 'oclock.dart';
 import 'stacked_icons.dart';
 import 'option.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -7,9 +9,12 @@ import 'package:url_launcher/url_launcher.dart';
 void main() => runApp(Sherwin());
 
 class Sherwin extends StatelessWidget {
+  
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    
+  SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.top]);
     return MaterialApp(
         title: 'SherwinVN',
         debugShowCheckedModeBanner: false,
@@ -22,8 +27,10 @@ class Sherwin extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
+    
     return new Scaffold(
       body: Center(
         child: Column(
@@ -85,7 +92,16 @@ class HomePage extends StatelessWidget {
                   ),
                 )),
               ],
-            )
+            ),
+            Expanded(
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      height: 300,
+                      child: Clock()),
+                  ]),
+            ),
           ],
         ),
       ),
