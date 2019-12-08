@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'loginPage.dart';
 import 'oclock.dart';
 import 'stacked_icons.dart';
@@ -14,7 +13,7 @@ class Sherwin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-  SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.top]);
+  //SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.top]);
     return MaterialApp(
         title: 'SherwinVN',
         debugShowCheckedModeBanner: false,

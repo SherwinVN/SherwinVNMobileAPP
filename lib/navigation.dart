@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sherwinvn/Masobimat.dart';
 
 class DrawerItem {
   String title;

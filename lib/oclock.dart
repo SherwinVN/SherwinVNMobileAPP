@@ -1,8 +1,6 @@
 import 'dart:async';
 import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show SystemChrome, DeviceOrientation;
 import 'package:intl/intl.dart' show DateFormat;      
 
 class Clock extends StatefulWidget {

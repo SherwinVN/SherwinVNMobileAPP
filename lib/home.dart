@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'Masobimat.dart';
 import 'navigation.dart';
 
@@ -57,7 +56,7 @@ class MainContent extends StatelessWidget {
               Row(
                 children: <Widget>[
                   new Text(
-                    "All My Work",
+                    "All My Work",                    
                     style: new TextStyle(
                       fontSize: 30.0,
                     ),
@@ -237,8 +236,10 @@ class MainContent extends StatelessWidget {
                       height: 150.0,
                       child: GestureDetector(
                         onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (BuildContext context) => Masobimat()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Masobimat()));
                         },
                         child: new Column(
                           children: <Widget>[
